@@ -12,9 +12,6 @@
             width:100%;
             height:750px;
         }
-        span {
-             background: radial-gradient(Lavender, darkslateblue);
-        }
         h1 {
             font-size: 48px;
             text-align: center;
@@ -91,28 +88,6 @@
             50% {opacity: 0;}
             100% {opacity: 1;}
         }
-
-        #arrow {
-            width: 100px;
-            height: 100px;
-            background-image: radial-gradient(Lavender, darkslateblue);
-            transform: rotate(90deg); /*Rotate to the right*/
-            margin-left: 50px;
-            z-index: -1;
-            -webkit-animation: h3 3s ease-in-out 0s 1 normal;
-        }
-        /*opacity for arrow*/
-        @keyframes arrow {
-            0% {opacity: 0;}
-            50% {opacity: 0;}
-            100% {opacity: 1;}
-        }
-
-        @-webkit-keyframes arrow {
-            0% {opacity: 0;}
-            50% {opacity: 0;}
-            100% {opacity: 1;}
-        }
         /*Border(continued)*/
         #border.part2 {
             width: 250px;
@@ -141,8 +116,8 @@
         }
         /*box model for Gradients(continued) */
         #gradients.part2 {
-            width: 250px;
-            height: 100px;
+            width: 150px;
+            height: 200px;
             display: inline-block;
         }
         #shadows {
@@ -155,9 +130,6 @@
             border-style:dashed;
             box-shadow:10px 10px lightblue;
             display:inline-block;
-        }
-        #2dtransforms {
-            
         }
     </style>
 </head>
@@ -187,7 +159,6 @@
             <li style="color:teal;">solid - Defines a solid border</li>
             <li style="color:teal;">double - Defines a double border</li>
         </div>
-        <img id="arrow" src="arrow1.gif">
         
         <div id="border" class=".part2">
             <li style="color:teal;">groove - Defines a 3D grooved border. The effect depends on the border-color value</li>
@@ -227,7 +198,7 @@
                 <li style="color:#4682B4;">Defined by its center</li>
                 <li style="color:#4682B4;">background: radial-gradient(shape size at position, start-color, ..., last-color);</li>
             </ul>
-        </div> 
+        </div>
     </div>
 
 </body>
