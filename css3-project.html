@@ -40,7 +40,7 @@
             margin-right: 10px;
         }
         /*box model for background*/
-        #background {
+        .background {
             height: 340px;
             width: 250px;
             float: left;
@@ -61,12 +61,11 @@
             to {-webkit-transform: rotateY(359deg);}
         }
 
-        #border {
+        .border {
             width: 250px;
-            height: 360px;
+            height: 350px;
             background: linear-gradient(aliceblue, lightskyblue);
             margin-left: 50px;
-            margin-top: 50px;
             margin-bottom: 50px;
             border-style: solid;
             border-color: #ADD8E6;
@@ -89,23 +88,22 @@
             100% {opacity: 1;}
         }
         /*Border(continued)*/
-        #border.part2 {
+        .border.part2 {
             width: 250px;
-            height: 360px;
+            height: 350px;
             display: inline-block;
             margin-left: 300px;
             margin-right: 50px;
-            margin-top: 50px;
         }
 
         /*box model for Gradients*/
-        #gradients {
+        .gradients {
             width: 300px;
-            height: 380px;
+            height: 370px;
             background: linear-gradient(aliceblue, lightskyblue);
             float: left;
             margin-left:50px;
-            margin-right: 100px;
+            margin-right: 50px;
             border-style: solid;
             border-color: #ADD8E6; /*LightBlue*/
             box-shadow: 10px 10px black;
@@ -115,18 +113,17 @@
             margin-bottom: 50px;
         }
         /*box model for Gradients(continued) */
-        #gradients.part2 {
-            width: 150px;
-            height: 200px;
+        .gradients.part2 {
+            height:250px;
+            width:250px;
             display: inline-block;
         }
-        #shadows {
+        .shadows {
             width:250px;
             height:380px;
             float:right;
             background:linear-gradient(#6495ED,darkslateblue); /*color:CornflowerBlue*/
-            margin-top:50px;
-            margin-right:200px;
+            margin-right:100px;
             border-style:dashed;
             box-shadow:10px 10px lightblue;
             display:inline-block;
@@ -138,7 +135,8 @@
     <div>
         <h1>CSS3</h1>
         <h4>Credits to w3schools.com/css/</h4>
-        <div id="background"> 
+        <div class="row">
+            <div class="background">
             <h3>Background</h3>
             <p>The CSS background properties are used to define the background effects for elements</p>
             <li>background-color</li>
@@ -149,9 +147,9 @@
             <li>background-origin</li>
             <li>background-clip</li>
             <li>background-attachment</li>
-        </div>
-        
-        <div id="border">
+            </div>
+            
+            <div class="border">
             <h3 style="color:teal;">Border</h3>
             <p style="color:teal;">The CSS Border properties allow you to specify the style, width, and color of an element's border</p>
             <li style="color:teal;">dotted - Defines a dotted border</li>
@@ -159,8 +157,8 @@
             <li style="color:teal;">solid - Defines a solid border</li>
             <li style="color:teal;">double - Defines a double border</li>
         </div>
-        
-        <div id="border" class=".part2">
+            
+             <div class="border" class=".part2">
             <li style="color:teal;">groove - Defines a 3D grooved border. The effect depends on the border-color value</li>
             <li style="color:teal;">ridge - Defines a 3D ridged border. The effect depends on the border-color value</li>
             <li style="color:teal;">inset - Defines a 3D inset border. The effect depends on the border-color value</li>
@@ -168,7 +166,27 @@
             <li style="color:teal;">none - Defines no border</li>
             <li style="color:teal;">hidden - Defines a hidden border</li>
         </div>
-        <div id="shadows">
+            
+            <div class="gradients"> 
+            <h3 style="color:#4682B4;" >Gradients</h3>
+            <p style="color:#4682B4;">Display smooth transitions between two or more specified colors. There are two types of gradients: Linear Gradient & Radial Gradient</p>
+            <li style="color:#4682B4;">Linear Gradient</li>
+            <ul>
+                <li style="color:#4682B4;">To create a linear gradient you must define at least two color stops</li>
+                <li style="color:#4682B4;">Goes down/up/left/right/diagonally</li>
+                <li style="color:#4682B4;">background: linear-gradient (direction, color-stop1, color-stop2, ...);</li>
+            </ul>
+        </div>
+        
+            <div class="gradients" class=".part2">
+            <li style="color:#4682B4;">Radial Gradient</li>
+            <ul>
+                <li style="color:#4682B4;">Defined by its center</li>
+                <li style="color:#4682B4;">background: radial-gradient(shape size at position, start-color, ..., last-color);</li>
+            </ul>
+        </div>
+        
+            <div class="shadows">
             <h3 style="color:Darkblue;">Shadows</h3>
             <p style="color:Darkblue;">Add shadow to text and to elements.</p>
             <p style="color:Darkblue;">Text Shadow Effects-Applies multiple shadows to text</p>
@@ -180,25 +198,8 @@
                 <li>Glow Effects</li>
             </ul>
         </div>
-    </div>
-    <div>
-        <div id="gradients"> 
-            <h3 style="color:#4682B4;" >Gradients</h3>
-            <p style="color:#4682B4;">Display smooth transitions between two or more specified colors. There are two types of gradients: Linear Gradient & Radial Gradient</p>
-            <li style="color:#4682B4;">Linear Gradient</li>
-            <ul>
-                <li style="color:#4682B4;">To create a linear gradient you must define at least two color stops</li>
-                <li style="color:#4682B4;">Goes down/up/left/right/diagonally</li>
-                <li style="color:#4682B4;">background: linear-gradient (direction, color-stop1, color-stop2, ...);</li>
-            </ul>
-        </div>
-        <div id="gradients" class=".part2">
-            <li style="color:#4682B4;">Radial Fradient</li>
-            <ul>
-                <li style="color:#4682B4;">Defined by its center</li>
-                <li style="color:#4682B4;">background: radial-gradient(shape size at position, start-color, ..., last-color);</li>
-            </ul>
-        </div>
+        
+        </div><br>
     </div>
 
 </body>
